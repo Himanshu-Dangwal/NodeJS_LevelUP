@@ -12,6 +12,7 @@ if(cluster.isPrimary){
         cluster.fork()
     }
 }else{
+
     const app = express();
     const PORT = 8000;
 
@@ -20,7 +21,7 @@ if(cluster.isPrimary){
     })
 
     app.get("/",(req,res)=>{
-        console.log("Hello from server");
+        // console.log("Hello from server");
         res.json({message : `Server handled with process PID ${process.pid}`})
     })
 }
