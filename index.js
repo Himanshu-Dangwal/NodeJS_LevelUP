@@ -14,4 +14,5 @@ app.listen(PORT, ()=>{
 
 app.get("/",(req,res)=>{
     console.log("Hello from server");
+    res.json({message : `Server handled with process PID ${process.pid}`})
 })
